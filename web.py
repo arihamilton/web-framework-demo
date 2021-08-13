@@ -11,7 +11,7 @@ from flask_behind_proxy import FlaskBehindProxy
 app = Flask(__name__)                    # this gets the name of the file so Flask knows it's name
 proxied = FlaskBehindProxy(app)
 
-app.config['SECRET_KEY'] = '56f662178b6ca0617379a38e5b857cee'
+app.config['SECRET_KEY'] = SECRET_KEY
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 
 db = SQLAlchemy(app)
